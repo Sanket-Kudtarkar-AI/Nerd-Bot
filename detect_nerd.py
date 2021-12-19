@@ -3,9 +3,10 @@ import spacy
 import wordtodigits
 from nltk.tokenize import word_tokenize
 import json
+from config import ROOT_PATH
 
 # Category dictionary where keys are category name and values are the entities.
-with open("DATA/category_dict.json", "r",
+with open(f"{ROOT_PATH}\\DATA\\category_dict.json", "r",
           encoding='utf-8') as fp:
     category_dict = json.load(fp)
 
@@ -403,9 +404,9 @@ class DetectNerd:
 
 if __name__ == "__main__":
     # pass
-    nlp_amount = spacy.load('models/spacy_amount_md_2')
-    nlp_nil = spacy.load('models/spacy_nil')
-    nlp_quantity = spacy.load('models/spacy_quantities')
+    nlp_amount = spacy.load(f'{ROOT_PATH}\\models\\spacy_amount_md_2')
+    nlp_nil = spacy.load(f'{ROOT_PATH}\\models\\spacy_nil')
+    nlp_quantity = spacy.load(f'{ROOT_PATH}\\models\\spacy_quantities')
 
     dn = DetectNerd(nlp_amount, nlp_nil, nlp_quantity)
     # print(dn.detect("m ready to travel... just pulled my ticket for 5000 to book a flight"))
