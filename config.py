@@ -1,5 +1,5 @@
 import sys
 
 ROOT_PATH = sys.path[1]
-back = '\\\\'
+back = '/'
 ROOT_PATH = ROOT_PATH.replace("\\", back)
