@@ -5,7 +5,7 @@ from nltk.tokenize import word_tokenize
 import json
 
 # Category dictionary where keys are category name and values are the entities.
-with open("DATA\category_dict.json", "r",
+with open("DATA/category_dict.json", "r",
           encoding='utf-8') as fp:
     category_dict = json.load(fp)
 
